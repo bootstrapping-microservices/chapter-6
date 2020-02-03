@@ -1,0 +1,13 @@
+terraform_0.12.6_linux_amd64.zip
+ubuntu-xenial-16.04-cloudimg-console.log
+.vagrant/
+example-1/terraform.tfstate
+example-1/terraform.tfstate.backup
+example-1/.terraform/
+*.tfstate
+*.backup
+example-2/.terraform/
+example-3/.terraform/
+example-4/.terraform/
+example-4/.terraform.tfstate.lock.info
+cred.txt
