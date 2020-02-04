@@ -1,8 +1,4 @@
 
-resource "tls_private_key" "key" {
-    algorithm = "RSA"
-}
-
 resource "azurerm_kubernetes_cluster" "cluster" {
     name                = var.cluster_name
     location            = var.location
@@ -36,3 +32,32 @@ resource "azurerm_kubernetes_cluster" "cluster" {
         }
     }
 }
+
+output "cluster_client_key" {
+  value = azurerm_kubernetes_cluster.cluster.kube_config.0.client_key
+}
+
+output "cluster_client_certificate" {
+  value = azurerm_kubernetes_cluster.cluster.kube_config.0.client_certificate
+}
+
+output "cluster_cluster_ca_certificate" {
+  value = azurerm_kubernetes_cluster.cluster.kube_config.0.cluster_ca_certificate
+}
+
+output "cluster_cluster_username" {
+  value = azurerm_kubernetes_cluster.cluster.kube_config.0.username
+}
+
+output "cluster_cluster_password" {
+  value = azurerm_kubernetes_cluster.cluster.kube_config.0.password
+}
+
+output "cluster_kube_config" {
+  value = azurerm_kubernetes_cluster.cluster.kube_config_raw
+}
+
+output "cluster_host" {
+  value = azurerm_kubernetes_cluster.cluster.kube_config.0.host
+}
+
