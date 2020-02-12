@@ -16,3 +16,4 @@ example-3/scripts/.terraform/
 example-4/scripts/.terraform/
 example-1/scripts/.terraform.tfstate.lock.info
 example-1/scripts/.terraform/
+example-3/scripts/.terraform.tfstate.lock.info
